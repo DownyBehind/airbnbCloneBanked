@@ -12,6 +12,3 @@ class HouseAdmin(admin.ModelAdmin):
         "pets_allowed"
     )
     list_filter = ("price_per_night", "pets_allowed")
-    search_fields = ("address",)
-    list_display_links = ("name", "address")
-    list_editable = ("pets_allowed",)
