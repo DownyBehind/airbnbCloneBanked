@@ -10,7 +10,9 @@ class CustomUserAdmin(UserAdmin):
             "Profile",
             {"fields": ("username", "password", "name", "email", "is_host")},
         ),
-        ("Permission", {
+        (
+            "Permission",
+            {
                 "fields": (
                     "is_active",
                     "is_staff",
@@ -18,5 +20,6 @@ class CustomUserAdmin(UserAdmin):
                     "groups",
                     "user_permissions",
                 ),
-            },)
+            },
+        ),
     )
