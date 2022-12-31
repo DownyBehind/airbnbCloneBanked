@@ -9,6 +9,6 @@ class HouseAdmin(admin.ModelAdmin):
         "name",
         "price_per_night",
         "address",
-        "pets_allowed"
+        "pets_allowed",
     )
     list_filter = ("price_per_night", "pets_allowed")
