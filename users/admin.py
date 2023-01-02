@@ -8,7 +8,9 @@ class CustomUserAdmin(UserAdmin):
     fieldsets = (
         (
             "Profile",
-            {"fields": ("username", "password", "name", "email", "is_host")},
+            {"fields": ("username", "password", "name", "email", "is_host"),
+             "classes" :("wide",),
+             },
         ),
         (
             "Permission",
@@ -20,6 +22,16 @@ class CustomUserAdmin(UserAdmin):
                     "groups",
                     "user_permissions",
                 ),
+                "classes":("collapse",),
             },
         ),
+        (
+            "Important Dates", {
+                "fields": (
+                    "last_login", "date_joined"
+                ),
+                "classes":("collapse",),
+            }
+        ),
     )
+    list_display = ("username", "email", "name", "is_host")
