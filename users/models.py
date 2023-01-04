@@ -14,6 +14,7 @@ class User(AbstractUser):
     class CurrencyChoices(models.TextChoices):
         WON = "won", "Korean Won"
         USD = "usd", "Dollar"
+        
     
     first_name = models.CharField(max_length=150, editable=False)
     last_name = models.CharField(max_length=150, editable=False)
